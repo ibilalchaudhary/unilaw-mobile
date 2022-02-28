@@ -6,6 +6,7 @@ import Onboarding from './src/screen/Onboarding';
 import SignIn from './src/screen/SignIn';
 import SignUp from './src/screen/SignUp';
 import Verification from './src/screen/Verification';
+import UploadPic from './src/screen/UploadPic';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ export default function App() {
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="Verification" component={Verification} />
+        <Stack.Screen name="UploadPic" component={UploadPic} />
       </Stack.Navigator>
     </NavigationContainer>
   );

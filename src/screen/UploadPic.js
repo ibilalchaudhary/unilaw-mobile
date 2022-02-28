@@ -9,8 +9,9 @@ import {
 } from 'react-native';
 import React from 'react';
 import InputVerfication from '../component/InputVerfication';
+import {Camera} from 'react-native-feather';
 
-export default function Verification({navigation}) {
+export default function UploadPic({navigation}) {
   return (
     <ScrollView style={{flex: 1}}>
       <ImageBackground
@@ -20,7 +21,6 @@ export default function Verification({navigation}) {
           height: Dimensions.get('window').height,
           alignItems: 'center',
           justifyContent: 'center',
-          position: 'relative',
         }}>
         <Image
           source={require('../assets/logoDark.png')}
@@ -32,54 +32,42 @@ export default function Verification({navigation}) {
               fontSize: 24,
               fontWeight: 'bold',
               color: '#283244',
-              marginBottom: 15,
+              marginBottom: 25,
               alignSelf: 'center',
             }}>
-            Enter 4 Digits OTP
+            Upload Picture
           </Text>
-          <Text
-            style={{
-              fontSize: 14,
-              color: '#FFB579',
-              marginBottom: 15,
-              alignSelf: 'center',
-              textAlign: 'center',
-            }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry
-          </Text>
-          <InputVerfication />
           <View
             style={{
-              flexDirection: 'row',
-              marginTop: 30,
-              alignItems: 'center',
-              justifyContent: 'center',
+              width: 200,
+              height: 200,
+              borderRadius: 200,
+              alignSelf: 'center',
+              position: 'relative',
             }}>
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate('SignUp');
-              }}
-              style={{marginRight: 5}}>
-              <Text
-                style={{
-                  color: '#838488',
-                  textDecorationColor: '#838488',
-                  textDecorationLine: 'underline',
-                }}>
-                Resend OTP
-              </Text>
-            </TouchableOpacity>
-            <Text
-              style={{
-                color: '#181D3D',
-              }}>
-              2:00
-            </Text>
+            <Image
+              style={{width: '100%', height: '100%'}}
+              source={require('../assets/profile.png')}
+            />
           </View>
           <TouchableOpacity
+            style={{
+              width: 50,
+              height: 50,
+              borderRadius: 50,
+              backgroundColor: '#181D3D',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              position: 'absolute',
+              right: 120,
+              bottom: 120,
+            }}>
+            <Camera stroke="#fff" />
+          </TouchableOpacity>
+          <TouchableOpacity
             onPress={() => {
-              navigation.navigate('UploadPic');
+              navigation.navigate('');
             }}
             style={{
               backgroundColor: '#181D3D',
