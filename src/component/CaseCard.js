@@ -11,7 +11,7 @@ export default function CaseCard() {
   return (
     <TouchableOpacity
       style={{
-        paddingVertical: 10,
+        paddingVertical: 12,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -23,7 +23,7 @@ export default function CaseCard() {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        <View style={{width: 60, height: 60, marginRight: 14}}>
+        <View style={{width: 55, height: 55, marginRight: 14}}>
           <Image
             style={{width: '100%', height: '100%', borderRadius: 8}}
             source={require('../assets/cardPic.jpg')}

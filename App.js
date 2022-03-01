@@ -10,6 +10,7 @@ import UploadPic from './src/screen/UploadPic';
 import Subscriptions from './src/screen/Subscriptions';
 import Home from './src/screen/Home';
 import ForgotPassword from './src/screen/ForgotPassword';
+import CaseList from './src/screen/CaseList';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,7 @@ export default function App() {
         <Stack.Screen name="UploadPic" component={UploadPic} />
         <Stack.Screen name="Subscriptions" component={Subscriptions} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="CaseList" component={CaseList} />
       </Stack.Navigator>
     </NavigationContainer>
   );

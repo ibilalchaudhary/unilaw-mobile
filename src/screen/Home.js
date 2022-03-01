@@ -8,7 +8,7 @@ import {
   Image,
 } from 'react-native';
 import React, {useState} from 'react';
-import {Menu} from 'react-native-feather';
+import {Menu, Search} from 'react-native-feather';
 import Svg, {Defs, LinearGradient, Stop, Path, G} from 'react-native-svg';
 import CaseCard from '../component/CaseCard';
 
@@ -54,7 +54,7 @@ function CategoryCard({svg, title, title2, selected, setSelected, activeSvg}) {
   );
 }
 
-export default function Home() {
+export default function Home({navigation}) {
   const [selected, setSelected] = useState('International');
   //   'International',
   //   'Constitutional',
@@ -68,7 +68,36 @@ export default function Home() {
       style={{
         width: '100%',
         height: Dimensions.get('window').height,
+        position: 'relative',
       }}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('CaseList');
+        }}
+        style={{
+          width: 55,
+          height: 55,
+          backgroundColor: '#FFB579',
+          borderRadius: 12,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          position: 'absolute',
+          bottom: 60,
+          right: 20,
+          zIndex: 999,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 1,
+            height: 1,
+          },
+          shadowOpacity: 0.23,
+          shadowRadius: 2.62,
+
+          elevation: 8,
+        }}>
+        <Search stroke="#000000" />
+      </TouchableOpacity>
       <View
         style={{
           display: 'flex',

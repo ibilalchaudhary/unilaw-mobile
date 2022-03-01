@@ -3,14 +3,19 @@ import React, {useState} from 'react';
 import {Eye, EyeOff, Search} from 'react-native-feather';
 import Svg, {G, Path} from 'react-native-svg';
 
-export default function InputBox({placeholder, secureTextEntry, style}) {
+export default function InputBox({
+  placeholder,
+  secureTextEntry,
+  style,
+  isDark,
+}) {
   const [focus, setFocus] = useState(false);
   const [isSecureTextEntry, setIsSecureTextEntry] = useState(secureTextEntry);
   return (
     <View style={{marginBottom: 14, marginTop: 10}}>
       <TextInput
         placeholder={placeholder}
-        placeholderTextColor="#ffffff"
+        placeholderTextColor={isDark ? '#414141' : '#ffffff'}
         secureTextEntry={isSecureTextEntry}
         onFocus={() => {
           setFocus(true);
@@ -25,7 +30,7 @@ export default function InputBox({placeholder, secureTextEntry, style}) {
           borderBottomWidth: 1,
           borderBottomColor: '#8D8C8C',
           fontSize: 14,
-          color: '#ffffff',
+          color: isDark ? '#414141' : '#ffffff',
           ...style,
         }}
       />
