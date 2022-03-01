@@ -41,7 +41,7 @@ function NavLink({title, selected, setSelected}) {
   );
 }
 
-export default function CaseList({navigation}) {
+export default function Favourite({navigation}) {
   const [selected, setSelected] = useState('Public law');
   return (
     <ImageBackground
@@ -61,7 +61,7 @@ export default function CaseList({navigation}) {
         }}>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('Home');
+            navigation.navigate('Profile');
           }}>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ export default function CaseList({navigation}) {
           </Svg>
         </TouchableOpacity>
         <Text style={{color: '#272727', fontSize: 20, fontWeight: '600'}}>
-          Case List
+          Favourite List
         </Text>
       </View>
       <View

@@ -6,10 +6,12 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
+import {Navigation} from 'react-native-feather';
 
-export default function CaseCard() {
+export default function CaseCard({onPress}) {
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={{
         paddingVertical: 12,
         display: 'flex',
@@ -31,7 +33,7 @@ export default function CaseCard() {
         </View>
         <View>
           <Text style={{fontSize: 16, fontWeight: '600', color: '#FFB579'}}>
-            Book Name
+            Case Name
           </Text>
           <Text style={{fontSize: 14, color: '#959595'}}>
             Lorem Ipsum is simply dummy text

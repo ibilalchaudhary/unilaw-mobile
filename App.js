@@ -11,6 +11,13 @@ import Subscriptions from './src/screen/Subscriptions';
 import Home from './src/screen/Home';
 import ForgotPassword from './src/screen/ForgotPassword';
 import CaseList from './src/screen/CaseList';
+import CaseCardDetails from './src/screen/CaseCardDetails';
+import Profile from './src/screen/Profile';
+import Favourite from './src/screen/Favourite';
+import ChangePassword from './src/screen/ChangePassword';
+import ChooseCard from './src/screen/ChooseCard';
+import OrderComplete from './src/screen/OrderComplete';
+import EditCard from './src/screen/EditCard';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +28,7 @@ export default function App() {
         screenOptions={{
           header: () => null,
         }}
-        // initialRouteName="CameraOpen"
+        // initialRouteName="EditCard"
       >
         <Stack.Screen name="Onboarding" component={Onboarding} />
         <Stack.Screen name="SignIn" component={SignIn} />
@@ -32,6 +39,13 @@ export default function App() {
         <Stack.Screen name="Subscriptions" component={Subscriptions} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="CaseList" component={CaseList} />
+        <Stack.Screen name="CaseCardDetails" component={CaseCardDetails} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Favourite" component={Favourite} />
+        <Stack.Screen name="ChangePassword" component={ChangePassword} />
+        <Stack.Screen name="ChooseCard" component={ChooseCard} />
+        <Stack.Screen name="OrderComplete" component={OrderComplete} />
+        <Stack.Screen name="EditCard" component={EditCard} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -144,7 +144,11 @@ export default function Home({navigation}) {
             source={require('../assets/logoDark.png')}
           />
         </View>
-        <TouchableOpacity style={{width: 40, height: 40}}>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('Profile');
+          }}
+          style={{width: 40, height: 40}}>
           <Image
             style={{width: '100%', height: '100%', borderRadius: 40}}
             source={require('../assets/profile.png')}
@@ -752,20 +756,66 @@ export default function Home({navigation}) {
             </Text>
           </TouchableOpacity>
         </View>
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
-        <CaseCard />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
+        <CaseCard
+          onPress={() => {
+            navigation.navigate('CaseCardDetails');
+          }}
+        />
       </ScrollView>
     </ImageBackground>
   );
