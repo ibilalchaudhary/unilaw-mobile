@@ -8,9 +8,24 @@ import {
   Image,
 } from 'react-native';
 import React, {useState} from 'react';
-import {Menu, Search} from 'react-native-feather';
-import Svg, {Defs, LinearGradient, Stop, Path, G} from 'react-native-svg';
+import Svg, {
+  Defs,
+  LinearGradient,
+  Stop,
+  Path,
+  G,
+  ClipPath,
+} from 'react-native-svg';
 import CaseCard from '../component/CaseCard';
+import {
+  Bell,
+  Clipboard,
+  Grid,
+  Settings,
+  User,
+  X,
+  Search,
+} from 'react-native-feather';
 
 function CategoryCard({svg, title, title2, selected, setSelected, activeSvg}) {
   return (
@@ -54,14 +69,88 @@ function CategoryCard({svg, title, title2, selected, setSelected, activeSvg}) {
   );
 }
 
+function SidePanel({onClose, navigation}) {
+  return (
+    <View
+      style={{
+        position: 'absolute',
+        backgroundColor: 'rgba(255,181,121,.92)',
+        width: '100%',
+        height: '100%',
+        padding: 20,
+        zIndex: 9999,
+      }}>
+      <TouchableOpacity onPress={onClose} style={{marginLeft: 'auto'}}>
+        <X size={20} color="#ffffff" />
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Profile');
+        }}
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          marginVertical: 12,
+        }}>
+        <User size={20} color="#ffffff" style={{marginRight: 10}} />
+        <Text style={{color: '#ffffff', fontSize: 16, flex: 1}}>
+          User Profile
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          marginVertical: 12,
+        }}>
+        <Settings size={20} color="#ffffff" style={{marginRight: 10}} />
+        <Text style={{color: '#ffffff', fontSize: 16}}>Settings</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('PrivacyPolicy');
+        }}
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          marginVertical: 12,
+        }}>
+        <Grid size={20} color="#ffffff" style={{marginRight: 10}} />
+        <Text style={{color: '#ffffff', fontSize: 16}}>Privacy Policy</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('TermsAndConditions');
+        }}
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          marginVertical: 12,
+        }}>
+        <Clipboard size={20} color="#ffffff" style={{marginRight: 10}} />
+        <Text style={{color: '#ffffff', fontSize: 16}}>Terms & Conditions</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Notifications');
+        }}
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          marginVertical: 12,
+        }}>
+        <Bell size={20} color="#ffffff" style={{marginRight: 10}} />
+        <Text style={{color: '#ffffff', fontSize: 16}}>Notifications</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
 export default function Home({navigation}) {
   const [selected, setSelected] = useState('International');
-  //   'International',
-  //   'Constitutional',
-  //   'Public',
-  //   'Labor',
-  //   'Criminal',
-  //   'Corporate',
+  const [isSidePanel, setIsSidePanel] = useState(false);
+
   return (
     <ImageBackground
       source={require('../assets/home_bg.png')}
@@ -107,7 +196,10 @@ export default function Home({navigation}) {
           paddingVertical: 15,
           paddingHorizontal: 20,
         }}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            setIsSidePanel(true);
+          }}>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
             width={21.48}
@@ -817,6 +909,14 @@ export default function Home({navigation}) {
           }}
         />
       </ScrollView>
+      {isSidePanel ? (
+        <SidePanel
+          navigation={navigation}
+          onClose={() => {
+            setIsSidePanel(false);
+          }}
+        />
+      ) : null}
     </ImageBackground>
   );
 }
