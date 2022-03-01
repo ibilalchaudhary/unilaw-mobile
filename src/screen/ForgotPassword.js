@@ -10,7 +10,7 @@ import {
 import React from 'react';
 import InputBox from '../component/InputBox';
 
-export default function SignUp({navigation}) {
+export default function ForgotPassword({navigation}) {
   return (
     <ScrollView style={{flex: 1}}>
       <ImageBackground
@@ -26,7 +26,7 @@ export default function SignUp({navigation}) {
           source={require('../assets/logoLight.png')}
           style={{position: 'absolute', top: 80, width: 110, height: 130}}
         />
-        <View style={{width: '100%', padding: 20, marginTop: 80}}>
+        <View style={{width: '100%', padding: 20}}>
           <Text
             style={{
               fontSize: 30,
@@ -35,13 +35,10 @@ export default function SignUp({navigation}) {
               marginBottom: 15,
               alignSelf: 'center',
             }}>
-            Register
+            Forgot Password
           </Text>
-          <InputBox placeholder="Phone Number" />
-          <InputBox placeholder="Name" />
           <InputBox placeholder="Email" />
-          <InputBox placeholder="Password" secureTextEntry={true} />
-          <InputBox placeholder="Confirm Password" secureTextEntry={true} />
+
           <TouchableOpacity
             onPress={() => {
               navigation.navigate('Verification');
@@ -54,38 +51,10 @@ export default function SignUp({navigation}) {
               justifyContent: 'center',
               alignItems: 'center',
               alignSelf: 'center',
-              marginTop: 40,
-            }}>
-            <Text style={{color: '#000000'}}>Sign Up</Text>
-          </TouchableOpacity>
-          <View
-            style={{
-              flexDirection: 'row',
               marginTop: 30,
-              alignItems: 'center',
-              justifyContent: 'center',
             }}>
-            <Text
-              style={{
-                color: '#ffffff',
-              }}>
-              Already have an account?
-            </Text>
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate('SignIn');
-              }}
-              style={{marginLeft: 5}}>
-              <Text
-                style={{
-                  color: '#FFB579',
-                  textDecorationColor: '#FFB579',
-                  textDecorationLine: 'underline',
-                }}>
-                Login
-              </Text>
-            </TouchableOpacity>
-          </View>
+            <Text style={{color: '#000000'}}>Send</Text>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     </ScrollView>

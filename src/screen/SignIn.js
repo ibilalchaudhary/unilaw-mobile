@@ -33,6 +33,7 @@ export default function SignIn({navigation}) {
               fontWeight: 'bold',
               color: '#FFB579',
               marginBottom: 15,
+              alignSelf: 'center',
             }}>
             Sign In
           </Text>

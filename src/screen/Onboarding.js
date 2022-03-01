@@ -1,6 +1,12 @@
 import React from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import {ImageBackground, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Image,
+  ImageBackground,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import Svg, {Path} from 'react-native-svg';
 
 const Tab = createMaterialTopTabNavigator();
@@ -15,15 +21,21 @@ function Onboarding1({navigation}) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        position: 'relative',
+        padding: 20,
       }}>
+      <Image
+        style={{position: 'relative'}}
+        source={require('../assets/onboardingContent.png')}
+      />
       <View
         style={{
           marginHorizontal: 20,
-          marginVertical: 17,
-          backgroundColor: 'rgba(255,181,121,0.8)',
-          padding: 24,
+          marginVertical: 20,
+          padding: 20,
           paddingVertical: 80,
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
         }}>
         <Text
           style={{
@@ -97,15 +109,21 @@ function Onboarding2({navigation}) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        position: 'relative',
+        padding: 20,
       }}>
+      <Image
+        style={{position: 'relative'}}
+        source={require('../assets/onboardingContent.png')}
+      />
       <View
         style={{
           marginHorizontal: 20,
-          marginVertical: 17,
-          backgroundColor: 'rgba(255,181,121,0.8)',
-          padding: 24,
+          marginVertical: 20,
+          padding: 20,
           paddingVertical: 80,
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
         }}>
         <Text
           style={{

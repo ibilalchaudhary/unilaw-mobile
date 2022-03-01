@@ -67,7 +67,7 @@ export default function UploadPic({navigation}) {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('');
+              navigation.navigate('Subscriptions');
             }}
             style={{
               backgroundColor: '#181D3D',
