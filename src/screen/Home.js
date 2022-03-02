@@ -28,6 +28,7 @@ import {
   Edit,
   LogOut,
 } from 'react-native-feather';
+import Animated, {SlideInLeft, SlideInRight} from 'react-native-reanimated';
 
 function CategoryCard({svg, title, title2, selected, setSelected, activeSvg}) {
   return (
@@ -73,7 +74,9 @@ function CategoryCard({svg, title, title2, selected, setSelected, activeSvg}) {
 
 function SidePanel({onClose, navigation}) {
   return (
-    <View
+    <Animated.View
+      entering={SlideInLeft}
+      exiting={SlideInRight}
       style={{
         position: 'absolute',
         backgroundColor: 'rgba(255,181,121,.92)',
@@ -164,7 +167,7 @@ function SidePanel({onClose, navigation}) {
           Log Out
         </Text>
       </TouchableOpacity>
-    </View>
+    </Animated.View>
   );
 }
 
