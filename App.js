@@ -20,6 +20,10 @@ import OrderComplete from './src/screen/OrderComplete';
 import EditCard from './src/screen/EditCard';
 import EditProfile from './src/screen/EditProfile';
 import BookCard from './src/component/BookCard';
+import BookCardDetails from './src/screen/BookCardDetails';
+import Notification from './src/screen/Notification';
+import PrivacyPolicy from './src/screen/PrivacyPolicy';
+import TermConditions from './src/screen/TermConditions';
 
 const Stack = createNativeStackNavigator();
 
@@ -50,6 +54,10 @@ export default function App() {
         <Stack.Screen name="EditCard" component={EditCard} />
         <Stack.Screen name="EditProfile" component={EditProfile} />
         <Stack.Screen name="BookCard" component={BookCard} />
+        <Stack.Screen name="BookCardDetails" component={BookCardDetails} />
+        <Stack.Screen name="Notification" component={Notification} />
+        <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
+        <Stack.Screen name="TermConditions" component={TermConditions} />
       </Stack.Navigator>
     </NavigationContainer>
   );

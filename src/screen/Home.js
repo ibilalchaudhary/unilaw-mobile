@@ -16,7 +16,15 @@ import Svg, {
   G,
   ClipPath,
 } from 'react-native-svg';
-import {X, Search, Edit, LogOut} from 'react-native-feather';
+import {
+  X,
+  Search,
+  Edit,
+  LogOut,
+  Bell,
+  Shield,
+  Book,
+} from 'react-native-feather';
 import Animated, {SlideInLeft, SlideInRight} from 'react-native-reanimated';
 import BookCard from '../component/BookCard';
 
@@ -79,7 +87,10 @@ function SidePanel({onClose, navigation}) {
         <X size={20} color="#ffffff" />
       </TouchableOpacity>
 
-      <View
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('EditProfile');
+        }}
         style={{
           flexDirection: 'row',
           alignItems: 'center',
@@ -103,19 +114,48 @@ function SidePanel({onClose, navigation}) {
             johnwalker@gmail.com
           </Text>
         </View>
-      </View>
+      </TouchableOpacity>
+
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('EditProfile');
+          navigation.navigate('TermConditions');
         }}
         style={{
           flexDirection: 'row',
           alignItems: 'center',
-          paddingVertical: 10,
+          paddingVertical: 12,
         }}>
-        <Edit stroke="#ffffff" width={20} height={20} />
+        <Book stroke="#ffffff" width={20} height={20} />
         <Text style={{fontSize: 16, color: '#ffffff', marginLeft: 16}}>
-          Edit Profile
+          Term & Conditions
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('PrivacyPolicy');
+        }}
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          paddingVertical: 12,
+        }}>
+        <Shield stroke="#ffffff" width={20} height={20} />
+        <Text style={{fontSize: 16, color: '#ffffff', marginLeft: 16}}>
+          Privacy Policy
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Notification');
+        }}
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          paddingVertical: 12,
+        }}>
+        <Bell stroke="#ffffff" width={20} height={20} />
+        <Text style={{fontSize: 16, color: '#ffffff', marginLeft: 16}}>
+          Notificatioons
         </Text>
       </TouchableOpacity>
       <TouchableOpacity
@@ -867,7 +907,42 @@ export default function Home({navigation}) {
         </View>
         <BookCard
           onPress={() => {
-            navigation.navigate('CaseCardDetails');
+            navigation.navigate('BookCardDetails');
+          }}
+        />
+        <BookCard
+          onPress={() => {
+            navigation.navigate('BookCardDetails');
+          }}
+        />
+        <BookCard
+          onPress={() => {
+            navigation.navigate('BookCardDetails');
+          }}
+        />
+        <BookCard
+          onPress={() => {
+            navigation.navigate('BookCardDetails');
+          }}
+        />
+        <BookCard
+          onPress={() => {
+            navigation.navigate('BookCardDetails');
+          }}
+        />
+        <BookCard
+          onPress={() => {
+            navigation.navigate('BookCardDetails');
+          }}
+        />
+        <BookCard
+          onPress={() => {
+            navigation.navigate('BookCardDetails');
+          }}
+        />
+        <BookCard
+          onPress={() => {
+            navigation.navigate('BookCardDetails');
           }}
         />
       </ScrollView>

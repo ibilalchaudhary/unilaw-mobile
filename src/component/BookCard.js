@@ -28,7 +28,7 @@ export default function BookCard({onPress}) {
         <View style={{width: 55, height: 55, marginRight: 14}}>
           <Image
             style={{width: '100%', height: '100%', borderRadius: 8}}
-            source={require('../assets/cardPic.jpg')}
+            source={require('../assets/bookPic.png')}
           />
         </View>
         <View>
