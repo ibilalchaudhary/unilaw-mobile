@@ -8,8 +8,6 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
-import InputVerfication from '../component/InputVerfication';
-import {Camera} from 'react-native-feather';
 import Svg, {Defs, LinearGradient, Stop, G, Path} from 'react-native-svg';
 
 export default function OrderComplete({navigation}) {

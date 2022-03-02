@@ -16,19 +16,9 @@ import Svg, {
   G,
   ClipPath,
 } from 'react-native-svg';
-import CaseCard from '../component/CaseCard';
-import {
-  Bell,
-  Clipboard,
-  Grid,
-  Settings,
-  User,
-  X,
-  Search,
-  Edit,
-  LogOut,
-} from 'react-native-feather';
+import {X, Search, Edit, LogOut} from 'react-native-feather';
 import Animated, {SlideInLeft, SlideInRight} from 'react-native-reanimated';
+import BookCard from '../component/BookCard';
 
 function CategoryCard({svg, title, title2, selected, setSelected, activeSvg}) {
   return (
@@ -866,68 +856,16 @@ export default function Home({navigation}) {
             Book Suggestion
           </Text>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('CaseList');
+            }}>
             <Text style={{color: '#FFB579', textDecorationLine: 'underline'}}>
               See more
             </Text>
           </TouchableOpacity>
         </View>
-        <CaseCard
-          onPress={() => {
-            navigation.navigate('CaseCardDetails');
-          }}
-        />
-        <CaseCard
-          onPress={() => {
-            navigation.navigate('CaseCardDetails');
-          }}
-        />
-        <CaseCard
-          onPress={() => {
-            navigation.navigate('CaseCardDetails');
-          }}
-        />
-        <CaseCard
-          onPress={() => {
-            navigation.navigate('CaseCardDetails');
-          }}
-        />
-        <CaseCard
-          onPress={() => {
-            navigation.navigate('CaseCardDetails');
-          }}
-        />
-        <CaseCard
-          onPress={() => {
-            navigation.navigate('CaseCardDetails');
-          }}
-        />
-        <CaseCard
-          onPress={() => {
-            navigation.navigate('CaseCardDetails');
-          }}
-        />
-        <CaseCard
-          onPress={() => {
-            navigation.navigate('CaseCardDetails');
-          }}
-        />
-        <CaseCard
-          onPress={() => {
-            navigation.navigate('CaseCardDetails');
-          }}
-        />
-        <CaseCard
-          onPress={() => {
-            navigation.navigate('CaseCardDetails');
-          }}
-        />
-        <CaseCard
-          onPress={() => {
-            navigation.navigate('CaseCardDetails');
-          }}
-        />
-        <CaseCard
+        <BookCard
           onPress={() => {
             navigation.navigate('CaseCardDetails');
           }}

@@ -5,7 +5,6 @@ import {
   View,
   Image,
   TouchableOpacity,
-  SafeAreaView,
   ImageBackground,
   Dimensions,
 } from 'react-native';

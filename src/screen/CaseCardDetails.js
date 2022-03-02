@@ -4,13 +4,10 @@ import {
   ImageBackground,
   Dimensions,
   TouchableOpacity,
-  Image,
   ScrollView,
 } from 'react-native';
 import React, {useState} from 'react';
 import Svg, {Defs, LinearGradient, Stop, Path, G} from 'react-native-svg';
-import InputBox from '../component/InputBox';
-import CaseCard from '../component/CaseCard';
 
 export default function CaseCardDetails({navigation}) {
   return (
@@ -71,23 +68,59 @@ export default function CaseCardDetails({navigation}) {
             Public Law
           </Text>
         </View>
-        <Text style={{fontSize: 16, color: '#FFB579', marginTop: 20}}>
-          Judge
-        </Text>
-        <Text style={{fontSize: 14, color: '#414141'}}>Lorem Ipsum</Text>
-        <Text style={{fontSize: 16, color: '#FFB579', marginTop: 20}}>
-          Parties Name
-        </Text>
-        <Text style={{fontSize: 14, color: '#414141'}}>
-          Lorem Ipsum v Lorem Ipsum{' '}
-        </Text>
-        <Text style={{fontSize: 16, color: '#FFB579', marginTop: 20}}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}>
+          <View style={{width: '50%'}}>
+            <Text
+              style={{
+                fontSize: 16,
+                color: '#FFB579',
+                marginTop: 20,
+                fontWeight: '700',
+              }}>
+              Judge
+            </Text>
+            <Text style={{fontSize: 14, color: '#414141'}}>Lorem Ipsum</Text>
+          </View>
+          <View style={{width: '50%'}}>
+            <Text
+              style={{
+                fontSize: 16,
+                color: '#FFB579',
+                marginTop: 20,
+                fontWeight: '700',
+              }}>
+              Parties Name
+            </Text>
+            <Text style={{fontSize: 14, color: '#414141'}}>
+              Lorem Ipsum v Lorem Ipsum{' '}
+            </Text>
+          </View>
+        </View>
+        <Text
+          style={{
+            fontSize: 16,
+            color: '#FFB579',
+            marginTop: 20,
+            fontWeight: '700',
+          }}>
           Decision
         </Text>
         <Text style={{fontSize: 14, color: '#414141'}}>
-          Lorem Ipsum is simply dummy text
+          Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy textis
+          simply dummy text
         </Text>
-        <Text style={{fontSize: 16, color: '#FFB579', marginTop: 20}}>
+        <Text
+          style={{
+            fontSize: 16,
+            color: '#FFB579',
+            marginTop: 20,
+            fontWeight: '700',
+          }}>
           Details
         </Text>
         <Text style={{fontSize: 14, color: '#414141'}}>

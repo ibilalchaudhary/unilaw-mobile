@@ -8,7 +8,6 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
-import {Camera} from 'react-native-feather';
 
 export default function Subscriptions({navigation}) {
   return (

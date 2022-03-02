@@ -4,7 +4,6 @@ import {
   ImageBackground,
   Dimensions,
   TouchableOpacity,
-  Image,
   ScrollView,
 } from 'react-native';
 import React, {useState} from 'react';

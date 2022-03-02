@@ -3,13 +3,10 @@ import {
   Text,
   ImageBackground,
   TouchableOpacity,
-  ScrollView,
   Dimensions,
   Image,
 } from 'react-native';
 import React from 'react';
-import InputVerfication from '../component/InputVerfication';
-import {Camera} from 'react-native-feather';
 import InputBox from '../component/InputBox';
 
 export default function ChangePassword({navigation}) {

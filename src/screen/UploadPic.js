@@ -3,15 +3,76 @@ import {
   Text,
   ImageBackground,
   TouchableOpacity,
-  ScrollView,
   Dimensions,
   Image,
 } from 'react-native';
-import React from 'react';
-import InputVerfication from '../component/InputVerfication';
+import React, {useState} from 'react';
 import {Camera} from 'react-native-feather';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+
+function GalleryPopup({setIsPopup}) {
+  return (
+    <View
+      style={{
+        width: '100%',
+        padding: 40,
+        backgroundColor: '#ffffff',
+        position: 'absolute',
+        bottom: 0,
+        shadowColor: '#000',
+        shadowOffset: {
+          width: 0,
+          height: 12,
+        },
+        shadowOpacity: 0.58,
+        shadowRadius: 16.0,
+
+        elevation: 24,
+      }}>
+      <TouchableOpacity
+        onPress={() => {
+          launchCamera({
+            cameraType: 'back',
+          });
+          setIsPopup(false);
+        }}
+        style={{
+          backgroundColor: '#181D3D',
+          padding: 13,
+          width: '100%',
+          borderRadius: 50,
+          justifyContent: 'center',
+          alignItems: 'center',
+          alignSelf: 'center',
+        }}>
+        <Text style={{color: '#ffffff'}}>Open Camera</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          launchImageLibrary({
+            mediaType: 'photo',
+          });
+          setIsPopup(false);
+        }}
+        style={{
+          backgroundColor: '#181D3D',
+          padding: 13,
+          width: '100%',
+          borderRadius: 50,
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 20,
+          alignSelf: 'center',
+          marginBottom: 40,
+        }}>
+        <Text style={{color: '#ffffff'}}>Open Gallery</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
 
 export default function UploadPic({navigation}) {
+  const [isPopup, setIsPopup] = useState(false);
   return (
     <ImageBackground
       source={require('../assets/light_bg.png')}
@@ -50,6 +111,9 @@ export default function UploadPic({navigation}) {
           />
         </View>
         <TouchableOpacity
+          onPress={() => {
+            setIsPopup(true);
+          }}
           style={{
             width: 50,
             height: 50,
@@ -81,6 +145,7 @@ export default function UploadPic({navigation}) {
           <Text style={{color: '#ffffff'}}>Next</Text>
         </TouchableOpacity>
       </View>
+      {isPopup ? <GalleryPopup setIsPopup={setIsPopup} /> : null}
     </ImageBackground>
   );
 }

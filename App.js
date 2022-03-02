@@ -19,6 +19,7 @@ import ChooseCard from './src/screen/ChooseCard';
 import OrderComplete from './src/screen/OrderComplete';
 import EditCard from './src/screen/EditCard';
 import EditProfile from './src/screen/EditProfile';
+import BookCard from './src/component/BookCard';
 
 const Stack = createNativeStackNavigator();
 
@@ -48,6 +49,7 @@ export default function App() {
         <Stack.Screen name="OrderComplete" component={OrderComplete} />
         <Stack.Screen name="EditCard" component={EditCard} />
         <Stack.Screen name="EditProfile" component={EditProfile} />
+        <Stack.Screen name="BookCard" component={BookCard} />
       </Stack.Navigator>
     </NavigationContainer>
   );
