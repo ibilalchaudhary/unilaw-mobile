@@ -12,7 +12,7 @@ import InputBox from '../component/InputBox';
 
 export default function SignIn({navigation}) {
   return (
-    <ScrollView style={{flex: 1}}>
+
       <ImageBackground
         source={require('../assets/login_bg.png')}
         style={{
@@ -97,6 +97,5 @@ export default function SignIn({navigation}) {
           </View>
         </View>
       </ImageBackground>
-    </ScrollView>
   );
 }

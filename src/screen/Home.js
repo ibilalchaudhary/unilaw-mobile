@@ -25,6 +25,8 @@ import {
   User,
   X,
   Search,
+  Edit,
+  LogOut,
 } from 'react-native-feather';
 
 function CategoryCard({svg, title, title2, selected, setSelected, activeSvg}) {
@@ -84,64 +86,83 @@ function SidePanel({onClose, navigation}) {
         <X size={20} color="#ffffff" />
       </TouchableOpacity>
 
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          padding: 20,
+          backgroundColor: '#ffffff',
+          borderRadius: 12,
+          marginTop: 20,
+          marginVertical: 14,
+        }}>
+        <View style={{width: 70, height: 70, marginRight: 20, marginLeft: 20}}>
+          <Image
+            style={{width: '100%', height: '100%', borderRadius: 70}}
+            source={require('../assets/cardPic.jpg')}
+          />
+        </View>
+        <View>
+          <Text style={{fontSize: 16, fontWeight: '600', color: '#272727'}}>
+            John walker
+          </Text>
+          <Text style={{fontSize: 14, color: '#272727'}}>
+            johnwalker@gmail.com
+          </Text>
+        </View>
+      </View>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('Profile');
+          navigation.navigate('EditProfile');
         }}
         style={{
           flexDirection: 'row',
           alignItems: 'center',
-          marginVertical: 12,
+          paddingVertical: 10,
         }}>
-        <User size={20} color="#ffffff" style={{marginRight: 10}} />
-        <Text style={{color: '#ffffff', fontSize: 16, flex: 1}}>
-          User Profile
+        <Edit stroke="#ffffff" width={20} height={20} />
+        <Text style={{fontSize: 16, color: '#ffffff', marginLeft: 16}}>
+          Edit Profile
         </Text>
       </TouchableOpacity>
       <TouchableOpacity
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          marginVertical: 12,
-        }}>
-        <Settings size={20} color="#ffffff" style={{marginRight: 10}} />
-        <Text style={{color: '#ffffff', fontSize: 16}}>Settings</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
         onPress={() => {
-          navigation.navigate('PrivacyPolicy');
+          navigation.navigate('ChooseCard');
         }}
         style={{
           flexDirection: 'row',
           alignItems: 'center',
-          marginVertical: 12,
+          paddingVertical: 12,
         }}>
-        <Grid size={20} color="#ffffff" style={{marginRight: 10}} />
-        <Text style={{color: '#ffffff', fontSize: 16}}>Privacy Policy</Text>
+        <Svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={19.878}
+          height={19.878}
+          viewBox="0 0 19.878 19.878">
+          <Path
+            data-name="Icon material-subscriptions"
+            d="M20.89 8.963H4.988V6.976h15.9zM18.9 3H6.976v1.988H18.9zm3.976 9.939v7.951a1.994 1.994 0 01-1.988 1.988h-15.9A1.994 1.994 0 013 20.89v-7.951a1.994 1.994 0 011.988-1.988h15.9a1.994 1.994 0 011.99 1.988zm-5.963 3.976l-5.963-3.25v6.49z"
+            transform="translate(-3 -3)"
+            fill="#ffffff"
+          />
+        </Svg>
+        <Text style={{fontSize: 16, color: '#ffffff', marginLeft: 16}}>
+          Subscription
+        </Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('TermsAndConditions');
+          navigation.navigate('SignIn');
         }}
         style={{
           flexDirection: 'row',
           alignItems: 'center',
-          marginVertical: 12,
+          paddingVertical: 12,
         }}>
-        <Clipboard size={20} color="#ffffff" style={{marginRight: 10}} />
-        <Text style={{color: '#ffffff', fontSize: 16}}>Terms & Conditions</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate('Notifications');
-        }}
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          marginVertical: 12,
-        }}>
-        <Bell size={20} color="#ffffff" style={{marginRight: 10}} />
-        <Text style={{color: '#ffffff', fontSize: 16}}>Notifications</Text>
+        <LogOut stroke="#ffffff" width={20} height={20} />
+        <Text style={{fontSize: 16, color: '#ffffff', marginLeft: 16}}>
+          Log Out
+        </Text>
       </TouchableOpacity>
     </View>
   );

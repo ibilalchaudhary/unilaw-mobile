@@ -18,6 +18,7 @@ import ChangePassword from './src/screen/ChangePassword';
 import ChooseCard from './src/screen/ChooseCard';
 import OrderComplete from './src/screen/OrderComplete';
 import EditCard from './src/screen/EditCard';
+import EditProfile from './src/screen/EditProfile';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +47,7 @@ export default function App() {
         <Stack.Screen name="ChooseCard" component={ChooseCard} />
         <Stack.Screen name="OrderComplete" component={OrderComplete} />
         <Stack.Screen name="EditCard" component={EditCard} />
+        <Stack.Screen name="EditProfile" component={EditProfile} />
       </Stack.Navigator>
     </NavigationContainer>
   );
