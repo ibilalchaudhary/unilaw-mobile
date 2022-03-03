@@ -12,7 +12,7 @@ export default function InputBox({
   const [focus, setFocus] = useState(false);
   const [isSecureTextEntry, setIsSecureTextEntry] = useState(secureTextEntry);
   return (
-    <View style={{marginBottom: 14, marginTop: 10}}>
+    <View style={{marginBottom: 8, marginTop: 10}}>
       <TextInput
         placeholder={placeholder}
         placeholderTextColor={isDark ? '#414141' : '#ffffff'}
@@ -36,16 +36,16 @@ export default function InputBox({
       />
       {secureTextEntry ? (
         <TouchableOpacity
-          style={{position: 'absolute', right: 0, bottom: 5}}
+          style={{position: 'absolute', right: 6, bottom: 10}}
           onPress={() => {
             isSecureTextEntry
               ? setIsSecureTextEntry(false)
               : setIsSecureTextEntry(true);
           }}>
           {isSecureTextEntry ? (
-            <Eye stroke="#8D8C8C" fill="none" width={20} height={20} />
+            <EyeOff stroke="#8D8C8C" fill="none" width={18} height={18} />
           ) : (
-            <EyeOff stroke="#8D8C8C" fill="none" width={20} height={20} />
+            <Eye stroke="#8D8C8C" fill="none" width={18} height={18} />
           )}
         </TouchableOpacity>
       ) : null}
