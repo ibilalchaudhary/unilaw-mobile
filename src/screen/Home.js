@@ -226,7 +226,7 @@ export default function Home({navigation}) {
           justifyContent: 'center',
           alignItems: 'center',
           position: 'absolute',
-          bottom: 60,
+          bottom: 50,
           right: 20,
           zIndex: 999,
           shadowColor: '#000',
@@ -247,7 +247,7 @@ export default function Home({navigation}) {
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          paddingVertical: 15,
+          paddingVertical: 10,
           paddingHorizontal: 20,
         }}>
         <TouchableOpacity
@@ -301,8 +301,16 @@ export default function Home({navigation}) {
           />
         </TouchableOpacity>
       </View>
-      <TouchableOpacity style={{alignSelf: 'center', marginVertical: 20}}>
-        <Image source={require('../assets/posterPic.png')} />
+      <TouchableOpacity
+        style={{
+          width: Dimensions.get('window').width,
+          paddingHorizontal: 20,
+          paddingVertical: 20,
+        }}>
+        <Image
+          style={{width: '100%', borderRadius: 10}}
+          source={require('../assets/posterPic.png')}
+        />
       </TouchableOpacity>
       <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
         <View style={{flexDirection: 'column', marginBottom: 10}}>

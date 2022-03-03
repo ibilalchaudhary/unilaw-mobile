@@ -17,12 +17,10 @@ export default function ForgotPassword({navigation}) {
         width: '100%',
         height: Dimensions.get('window').height,
         alignItems: 'center',
-        justifyContent: 'center',
-        position: 'relative',
       }}>
       <Image
         source={require('../assets/logoLight.png')}
-        style={{position: 'absolute', top: 80, width: 110, height: 130}}
+        style={{marginTop: 40}}
       />
       <View style={{width: '100%', padding: 20}}>
         <Text
@@ -32,6 +30,7 @@ export default function ForgotPassword({navigation}) {
             color: '#FFB579',
             marginBottom: 15,
             alignSelf: 'center',
+            marginTop: 40,
           }}>
           Forgot Password
         </Text>

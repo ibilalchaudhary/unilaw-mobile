@@ -18,12 +18,10 @@ export default function Verification({navigation}) {
         width: '100%',
         height: Dimensions.get('window').height,
         alignItems: 'center',
-        justifyContent: 'center',
-        position: 'relative',
       }}>
       <Image
         source={require('../assets/logoDark.png')}
-        style={{position: 'absolute', top: 80, width: 110, height: 130}}
+        style={{marginTop: 40}}
       />
       <View style={{width: '100%', padding: 20}}>
         <Text
@@ -33,6 +31,7 @@ export default function Verification({navigation}) {
             color: '#283244',
             marginBottom: 15,
             alignSelf: 'center',
+            marginTop: 40,
           }}>
           Enter 4 Digits OTP
         </Text>

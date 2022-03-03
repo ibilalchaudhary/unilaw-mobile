@@ -17,11 +17,10 @@ export default function ChangePassword({navigation}) {
         width: '100%',
         height: Dimensions.get('window').height,
         alignItems: 'center',
-        justifyContent: 'center',
       }}>
       <Image
         source={require('../assets/logoDark.png')}
-        style={{position: 'absolute', top: 80, width: 110, height: 130}}
+        style={{marginTop: 40}}
       />
       <View style={{width: '100%', padding: 20}}>
         <Text
@@ -31,6 +30,7 @@ export default function ChangePassword({navigation}) {
             color: '#283244',
             marginBottom: 25,
             alignSelf: 'center',
+            marginTop: 40,
           }}>
           Change Password
         </Text>
