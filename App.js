@@ -24,10 +24,14 @@ import BookCardDetails from './src/screen/BookCardDetails';
 import Notification from './src/screen/Notification';
 import PrivacyPolicy from './src/screen/PrivacyPolicy';
 import TermConditions from './src/screen/TermConditions';
+import SplashScreen from 'react-native-splash-screen';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  React.useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   return (
     <NavigationContainer>
       <Stack.Navigator
