@@ -44,7 +44,7 @@ export default class EditCard extends Component {
           }}>
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('ChooseCard');
+              navigation.navigate('Subscriptions');
             }}>
             <Svg
               xmlns="http://www.w3.org/2000/svg"

@@ -64,11 +64,27 @@ function GalleryPopup({setIsPopup}) {
           borderRadius: 50,
           justifyContent: 'center',
           alignItems: 'center',
-          marginTop: 20,
+          marginTop: 14,
+          alignSelf: 'center',
+        }}>
+        <Text style={{color: '#ffffff'}}>Open Gallery</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          setIsPopup(false);
+        }}
+        style={{
+          backgroundColor: '#181D3D',
+          padding: 13,
+          width: '100%',
+          borderRadius: 50,
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 14,
           alignSelf: 'center',
           marginBottom: 40,
         }}>
-        <Text style={{color: '#ffffff'}}>Open Gallery</Text>
+        <Text style={{color: '#ffffff'}}>Close</Text>
       </TouchableOpacity>
     </View>
   );
@@ -76,7 +92,6 @@ function GalleryPopup({setIsPopup}) {
 
 export default function EditProfile({navigation}) {
   const [isPopup, setIsPopup] = useState(false);
-  const [selected, setSelected] = useState('Public law');
   return (
     <ImageBackground
       source={require('../assets/home_bg.png')}
@@ -117,9 +132,9 @@ export default function EditProfile({navigation}) {
       <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
         <View
           style={{
-            width: 180,
-            height: 180,
-            borderRadius: 200,
+            width: 160,
+            height: 160,
+            borderRadius: 1600,
             alignSelf: 'center',
             position: 'relative',
             marginVertical: 20,
@@ -135,9 +150,9 @@ export default function EditProfile({navigation}) {
             setIsPopup(true);
           }}
           style={{
-            width: 50,
-            height: 50,
-            borderRadius: 50,
+            width: 40,
+            height: 40,
+            borderRadius: 40,
             backgroundColor: '#181D3D',
             display: 'flex',
             justifyContent: 'center',
@@ -146,7 +161,7 @@ export default function EditProfile({navigation}) {
             right: 100,
             bottom: 230,
           }}>
-          <Camera stroke="#fff" />
+          <Camera stroke="#fff" width={20} height={20} />
         </TouchableOpacity>
         <InputBox isDark={true} placeholder="Email" />
         <InputBox

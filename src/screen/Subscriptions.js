@@ -32,7 +32,7 @@ export default function Subscriptions({navigation}) {
           marginTop: 40,
         }}
         onPress={() => {
-          navigation.navigate('Home');
+          navigation.navigate('EditCard');
         }}>
         <ImageBackground
           style={{padding: 20, paddingVertical: 30}}
@@ -46,7 +46,7 @@ export default function Subscriptions({navigation}) {
             </Text>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('Home');
+                navigation.navigate('EditCard');
               }}
               style={{
                 padding: 6,
@@ -69,7 +69,7 @@ export default function Subscriptions({navigation}) {
           paddingVertical: 10,
         }}
         onPress={() => {
-          navigation.navigate('Home');
+          navigation.navigate('EditCard');
         }}>
         <ImageBackground
           style={{padding: 20, paddingVertical: 30}}
@@ -83,7 +83,7 @@ export default function Subscriptions({navigation}) {
             </Text>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('Home');
+                navigation.navigate('EditCard');
               }}
               style={{
                 padding: 6,
@@ -98,6 +98,22 @@ export default function Subscriptions({navigation}) {
             </TouchableOpacity>
           </View>
         </ImageBackground>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Home');
+        }}
+        style={{
+          backgroundColor: '#181D3D',
+          padding: 13,
+          width: '60%',
+          borderRadius: 50,
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 20,
+          alignSelf: 'center',
+        }}>
+        <Text style={{color: '#ffffff'}}>Skip</Text>
       </TouchableOpacity>
     </ImageBackground>
   );

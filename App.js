@@ -25,6 +25,7 @@ import Notification from './src/screen/Notification';
 import PrivacyPolicy from './src/screen/PrivacyPolicy';
 import TermConditions from './src/screen/TermConditions';
 import SplashScreen from 'react-native-splash-screen';
+import ForgotPasswordInputs from './src/screen/ForgotPasswordInputs';
 
 const Stack = createNativeStackNavigator();
 
@@ -62,6 +63,10 @@ export default function App() {
         <Stack.Screen name="Notification" component={Notification} />
         <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
         <Stack.Screen name="TermConditions" component={TermConditions} />
+        <Stack.Screen
+          name="ForgotPasswordInputs"
+          component={ForgotPasswordInputs}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

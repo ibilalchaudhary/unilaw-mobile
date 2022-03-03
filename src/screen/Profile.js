@@ -11,7 +11,6 @@ import React, {useState} from 'react';
 import Svg, {Defs, LinearGradient, Stop, Path, G} from 'react-native-svg';
 
 export default function Profile({navigation}) {
-  const [selected, setSelected] = useState('Public law');
   return (
     <ImageBackground
       source={require('../assets/home_bg.png')}
@@ -50,17 +49,20 @@ export default function Profile({navigation}) {
         </Text>
       </View>
       <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
-        <View
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('EditProfile');
+          }}
           style={{
             flexDirection: 'row',
             alignItems: 'center',
             padding: 20,
             backgroundColor: '#2D325A',
             borderRadius: 12,
-            marginVertical: 40,
+            marginVertical: 20,
           }}>
           <View
-            style={{width: 70, height: 70, marginRight: 20, marginLeft: 20}}>
+            style={{width: 70, height: 70, marginRight: 20, marginLeft: 10}}>
             <Image
               style={{width: '100%', height: '100%', borderRadius: 70}}
               source={require('../assets/cardPic.jpg')}
@@ -74,7 +76,7 @@ export default function Profile({navigation}) {
               johnwalker@gmail.com
             </Text>
           </View>
-        </View>
+        </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
             navigation.navigate('ChangePassword');
@@ -127,7 +129,7 @@ export default function Profile({navigation}) {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('ChooseCard');
+            navigation.navigate('Subscriptions');
           }}
           style={{
             flexDirection: 'row',

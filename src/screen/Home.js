@@ -87,10 +87,7 @@ function SidePanel({onClose, navigation}) {
         <X size={20} color="#ffffff" />
       </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate('EditProfile');
-        }}
+      <View
         style={{
           flexDirection: 'row',
           alignItems: 'center',
@@ -114,7 +111,7 @@ function SidePanel({onClose, navigation}) {
             johnwalker@gmail.com
           </Text>
         </View>
-      </TouchableOpacity>
+      </View>
 
       <TouchableOpacity
         onPress={() => {
@@ -160,7 +157,7 @@ function SidePanel({onClose, navigation}) {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('ChooseCard');
+          navigation.navigate('Subscriptions');
         }}
         style={{
           flexDirection: 'row',
@@ -904,10 +901,7 @@ export default function Home({navigation}) {
             Book Suggestion
           </Text>
 
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate('CaseList');
-            }}>
+          <TouchableOpacity>
             <Text style={{color: '#FFB579', textDecorationLine: 'underline'}}>
               See more
             </Text>

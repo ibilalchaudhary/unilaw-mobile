@@ -15,7 +15,8 @@ function GalleryPopup({setIsPopup}) {
     <View
       style={{
         width: '100%',
-        padding: 40,
+        padding: 20,
+        paddingVertical: 34,
         backgroundColor: '#ffffff',
         position: 'absolute',
         bottom: 0,
@@ -61,11 +62,27 @@ function GalleryPopup({setIsPopup}) {
           borderRadius: 50,
           justifyContent: 'center',
           alignItems: 'center',
-          marginTop: 20,
+          marginTop: 14,
+          alignSelf: 'center',
+        }}>
+        <Text style={{color: '#ffffff'}}>Open Gallery</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          setIsPopup(false);
+        }}
+        style={{
+          backgroundColor: '#181D3D',
+          padding: 13,
+          width: '100%',
+          borderRadius: 50,
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 14,
           alignSelf: 'center',
           marginBottom: 40,
         }}>
-        <Text style={{color: '#ffffff'}}>Open Gallery</Text>
+        <Text style={{color: '#ffffff'}}>Close</Text>
       </TouchableOpacity>
     </View>
   );
@@ -99,9 +116,9 @@ export default function UploadPic({navigation}) {
         </Text>
         <View
           style={{
-            width: 200,
-            height: 200,
-            borderRadius: 200,
+            width: 160,
+            height: 160,
+            borderRadius: 160,
             alignSelf: 'center',
             position: 'relative',
           }}>
@@ -115,18 +132,18 @@ export default function UploadPic({navigation}) {
             setIsPopup(true);
           }}
           style={{
-            width: 50,
-            height: 50,
-            borderRadius: 50,
+            width: 40,
+            height: 40,
+            borderRadius: 40,
             backgroundColor: '#181D3D',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             position: 'absolute',
-            right: 120,
+            right: 110,
             bottom: 120,
           }}>
-          <Camera stroke="#fff" />
+          <Camera width={20} height={20} stroke="#fff" />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {

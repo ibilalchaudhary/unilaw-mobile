@@ -42,7 +42,7 @@ export default function SignUp({navigation}) {
           <InputBox placeholder="Confirm Password" secureTextEntry={true} />
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('Verification');
+              navigation.navigate('UploadPic');
             }}
             style={{
               backgroundColor: '#FFB579',

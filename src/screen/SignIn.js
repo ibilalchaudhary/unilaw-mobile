@@ -19,81 +19,83 @@ export default function SignIn({navigation}) {
         height: Dimensions.get('window').height,
         alignItems: 'center',
       }}>
-      <Image
-        style={{marginTop: 40}}
-        source={require('../assets/logoLight.png')}
-      />
-      <View style={{width: '100%', padding: 20}}>
-        <Text
-          style={{
-            fontSize: 30,
-            fontWeight: 'bold',
-            color: '#FFB579',
-            marginBottom: 15,
-            alignSelf: 'center',
-            marginTop: 40,
-          }}>
-          Sign In
-        </Text>
-        <InputBox placeholder="Email" />
-        <InputBox placeholder="Password" secureTextEntry={true} />
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate('ForgotPassword');
-          }}
-          style={{marginLeft: 'auto'}}>
+      <ScrollView style={{flex: 1, width: '100%'}}>
+        <Image
+          style={{marginTop: 40, alignSelf: 'center'}}
+          source={require('../assets/logoLight.png')}
+        />
+        <View style={{width: '100%', padding: 20}}>
           <Text
             style={{
-              color: '#ffffff',
+              fontSize: 30,
+              fontWeight: 'bold',
+              color: '#FFB579',
+              marginBottom: 15,
+              alignSelf: 'center',
+              marginTop: 60,
             }}>
-            Forgot Password?
+            Sign In
           </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate('Home');
-          }}
-          style={{
-            backgroundColor: '#FFB579',
-            padding: 13,
-            width: '60%',
-            borderRadius: 50,
-            justifyContent: 'center',
-            alignItems: 'center',
-            alignSelf: 'center',
-            marginTop: 50,
-          }}>
-          <Text style={{color: '#000000'}}>Sign In</Text>
-        </TouchableOpacity>
-        <View
-          style={{
-            flexDirection: 'row',
-            marginTop: 30,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <Text
-            style={{
-              color: '#ffffff',
-            }}>
-            Don't have an account?
-          </Text>
+          <InputBox placeholder="Email" />
+          <InputBox placeholder="Password" secureTextEntry={true} />
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('SignUp');
+              navigation.navigate('ForgotPassword');
             }}
-            style={{marginLeft: 5}}>
+            style={{marginLeft: 'auto'}}>
             <Text
               style={{
-                color: '#FFB579',
-                textDecorationColor: '#FFB579',
-                textDecorationLine: 'underline',
+                color: '#ffffff',
               }}>
-              Sign Up
+              Forgot Password?
             </Text>
           </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Home');
+            }}
+            style={{
+              backgroundColor: '#FFB579',
+              padding: 13,
+              width: '60%',
+              borderRadius: 50,
+              justifyContent: 'center',
+              alignItems: 'center',
+              alignSelf: 'center',
+              marginTop: 50,
+            }}>
+            <Text style={{color: '#000000'}}>Sign In</Text>
+          </TouchableOpacity>
+          <View
+            style={{
+              flexDirection: 'row',
+              marginTop: 30,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Text
+              style={{
+                color: '#ffffff',
+              }}>
+              Don't have an account?
+            </Text>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('SignUp');
+              }}
+              style={{marginLeft: 5}}>
+              <Text
+                style={{
+                  color: '#FFB579',
+                  textDecorationColor: '#FFB579',
+                  textDecorationLine: 'underline',
+                }}>
+                Sign Up
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </ImageBackground>
   );
 }

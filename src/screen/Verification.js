@@ -56,7 +56,7 @@ export default function Verification({navigation}) {
           }}>
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('SignUp');
+              navigation.navigate('Verification');
             }}
             style={{marginRight: 5}}>
             <Text
@@ -77,7 +77,7 @@ export default function Verification({navigation}) {
         </View>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('UploadPic');
+            navigation.navigate('ForgotPasswordInputs');
           }}
           style={{
             backgroundColor: '#181D3D',
