@@ -73,6 +73,14 @@ export default function LawyerCardDetails({navigation}) {
         </Text>
         <Text
           style={{
+            fontSize: 14,
+            color: '#272727',
+            alignSelf: 'center',
+          }}>
+          Corporate Law
+        </Text>
+        <Text
+          style={{
             fontSize: 16,
             color: '#272727',
             alignSelf: 'center',
