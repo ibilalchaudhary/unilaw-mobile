@@ -27,6 +27,8 @@ import {
 } from 'react-native-feather';
 import Animated, {SlideInLeft, SlideInRight} from 'react-native-reanimated';
 import BookCard from '../component/BookCard';
+import HomeNav from '../component/HomeNav';
+import LawyerCard from '../component/LawyerCard';
 
 function CategoryCard({svg, title, title2, selected, setSelected, activeSvg}) {
   return (
@@ -201,6 +203,7 @@ function SidePanel({onClose, navigation}) {
 export default function Home({navigation}) {
   const [selected, setSelected] = useState('International');
   const [isSidePanel, setIsSidePanel] = useState(false);
+  const [isNav, setIsNav] = useState('Books');
 
   return (
     <ImageBackground
@@ -892,61 +895,139 @@ export default function Home({navigation}) {
             alignItems: 'center',
             justifyContent: 'space-between',
           }}>
-          <Text
+          <View
             style={{
-              color: '#272727',
-              fontSize: 20,
-              fontWeight: '600',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
             }}>
-            Book Suggestion
-          </Text>
-
-          <TouchableOpacity>
-            <Text style={{color: '#FFB579', textDecorationLine: 'underline'}}>
+            <HomeNav title="Books" isNav={isNav} setIsNav={setIsNav} />
+            <HomeNav title="Lawyers" isNav={isNav} setIsNav={setIsNav} />
+          </View>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('MoreListings');
+            }}
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+            <Text style={{color: '#FFB579', fontWeight: '600', marginRight: 6}}>
               See more
             </Text>
+            <Svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={8.029}
+              height={10.646}
+              viewBox="0 0 5.029 7.646">
+              <Path
+                data-name="Icon ionic-ios-arrow-back"
+                d="M12.767 10.016L16.1 7.125a.5.5 0 000-.772.7.7 0 00-.89 0l-3.776 3.276a.5.5 0 00-.018.753l3.787 3.3a.7.7 0 00.89 0 .5.5 0 000-.772z"
+                transform="rotate(-180 8.14 6.92)"
+                fill="#ffb579"
+              />
+            </Svg>
           </TouchableOpacity>
         </View>
-        <BookCard
-          onPress={() => {
-            navigation.navigate('BookCardDetails');
-          }}
-        />
-        <BookCard
-          onPress={() => {
-            navigation.navigate('BookCardDetails');
-          }}
-        />
-        <BookCard
-          onPress={() => {
-            navigation.navigate('BookCardDetails');
-          }}
-        />
-        <BookCard
-          onPress={() => {
-            navigation.navigate('BookCardDetails');
-          }}
-        />
-        <BookCard
-          onPress={() => {
-            navigation.navigate('BookCardDetails');
-          }}
-        />
-        <BookCard
-          onPress={() => {
-            navigation.navigate('BookCardDetails');
-          }}
-        />
-        <BookCard
-          onPress={() => {
-            navigation.navigate('BookCardDetails');
-          }}
-        />
-        <BookCard
-          onPress={() => {
-            navigation.navigate('BookCardDetails');
-          }}
-        />
+        {isNav === 'Books' ? (
+          <>
+            <BookCard
+              onPress={() => {
+                navigation.navigate('BookCardDetails');
+              }}
+            />
+            <BookCard
+              onPress={() => {
+                navigation.navigate('BookCardDetails');
+              }}
+            />
+            <BookCard
+              onPress={() => {
+                navigation.navigate('BookCardDetails');
+              }}
+            />
+            <BookCard
+              onPress={() => {
+                navigation.navigate('BookCardDetails');
+              }}
+            />
+            <BookCard
+              onPress={() => {
+                navigation.navigate('BookCardDetails');
+              }}
+            />
+            <BookCard
+              onPress={() => {
+                navigation.navigate('BookCardDetails');
+              }}
+            />
+            <BookCard
+              onPress={() => {
+                navigation.navigate('BookCardDetails');
+              }}
+            />
+            <BookCard
+              onPress={() => {
+                navigation.navigate('BookCardDetails');
+              }}
+            />
+          </>
+        ) : null}
+        {isNav === 'Lawyers' ? (
+          <>
+            <LawyerCard
+              onPress={() => {
+                navigation.navigate('LawyerCardDetails');
+              }}
+            />
+            <LawyerCard
+              onPress={() => {
+                navigation.navigate('LawyerCardDetails');
+              }}
+            />
+            <LawyerCard
+              onPress={() => {
+                navigation.navigate('LawyerCardDetails');
+              }}
+            />
+            <LawyerCard
+              onPress={() => {
+                navigation.navigate('LawyerCardDetails');
+              }}
+            />
+            <LawyerCard
+              onPress={() => {
+                navigation.navigate('LawyerCardDetails');
+              }}
+            />
+            <LawyerCard
+              onPress={() => {
+                navigation.navigate('LawyerCardDetails');
+              }}
+            />
+            <LawyerCard
+              onPress={() => {
+                navigation.navigate('LawyerCardDetails');
+              }}
+            />
+            <LawyerCard
+              onPress={() => {
+                navigation.navigate('LawyerCardDetails');
+              }}
+            />
+            <LawyerCard
+              onPress={() => {
+                navigation.navigate('LawyerCardDetails');
+              }}
+            />
+            <LawyerCard
+              onPress={() => {
+                navigation.navigate('LawyerCardDetails');
+              }}
+            />
+          </>
+        ) : null}
       </ScrollView>
       {isSidePanel ? (
         <SidePanel

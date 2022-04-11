@@ -33,7 +33,7 @@ export default function CaseCard({onPress}) {
         </View>
         <View>
           <Text style={{fontSize: 16, fontWeight: '600', color: '#FFB579'}}>
-            Case Name
+            Book Name
           </Text>
           <Text style={{fontSize: 14, color: '#959595'}}>
             Lorem Ipsum is simply dummy text

@@ -26,6 +26,8 @@ import PrivacyPolicy from './src/screen/PrivacyPolicy';
 import TermConditions from './src/screen/TermConditions';
 import SplashScreen from 'react-native-splash-screen';
 import ForgotPasswordInputs from './src/screen/ForgotPasswordInputs';
+import MoreListings from './src/screen/MoreListings';
+import LawyerCardDetails from './src/screen/LawyerCardDetails';
 
 const Stack = createNativeStackNavigator();
 
@@ -67,6 +69,8 @@ export default function App() {
           name="ForgotPasswordInputs"
           component={ForgotPasswordInputs}
         />
+        <Stack.Screen name="MoreListings" component={MoreListings} />
+        <Stack.Screen name="LawyerCardDetails" component={LawyerCardDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );
